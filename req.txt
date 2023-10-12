@@ -2,5 +2,5 @@ pandas
 numpy
 tensorflow 
 yfinance
-maptlotlib
+matplotlib
 #pip install -U scikit-learn
