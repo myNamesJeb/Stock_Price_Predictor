@@ -1,17 +1,49 @@
+print("loading Yahoo Finance data...", end='', flush=True)
+# Importing yfinance
+print("Importing yfinance...", end='', flush=True)
 import yfinance as yf
+print(" done")
+
+# Importing numpy
+print("Importing numpy...", end='', flush=True)
 import numpy as np
+print(" done")
+
+# Importing pandas
+print("Importing pandas...", end='', flush=True)
 import pandas as pd
+print(" done")
+
+# Importing tensorflow
+print("Importing tensorflow...", end='', flush=True)
 import tensorflow as tf
+print(" done")
+
+# Importing MinMaxScaler from sklearn.preprocessing
+print("Importing MinMaxScaler...", end='', flush=True)
 from sklearn.preprocessing import MinMaxScaler
+print(" done")
+
+# Importing Sequential and Dense from tensorflow.keras.models
+print("Importing Sequential and Dense from tensorflow.keras.models...", end='', flush=True)
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, LSTM
-import matplotlib.pyplot as plt
+print(" done")
 
+# Importing matplotlib.pyplot
+print("Importing matplotlib.pyplot...", end='', flush=True)
+import matplotlib.pyplot as plt
+print(" done")
+import os
+print("!!!!!!!!!!!!!!done!!!!!!!!!!!!!!")
+import time
+time.sleep(1)
+os.system('cls')
 # Define the symbol for Intel
 symbol = 'INTC'
 
 # Download Intel stock data using yfinance up to the current date
-intel_data = yf.download(symbol, start='2010-01-01', end=pd.Timestamp.now().strftime('%Y-%m-%d'))
+intel_data = yf.download(symbol, start='2020-01-01', end=pd.Timestamp.now().strftime('%Y-%m-%d'))
 
 # Extract the 'Close' prices as our target variable
 data = intel_data[['Close']].values

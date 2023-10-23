@@ -3,4 +3,5 @@ numpy
 tensorflow 
 yfinance
 matplotlib
+tqdm
 #pip install -U scikit-learn
